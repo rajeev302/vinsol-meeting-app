@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ScheduleMeetingActivity">
+
+    <TextView
+        android:id="@+id/meeting_date_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/meeting_date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date value"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="72dp"
+        app:layout_constraintStart_toEndOf="@id/meeting_date_key"
+        app:layout_constraintTop_toTopOf="@id/meeting_date_key"/>
+
+    <TextView
+        android:id="@+id/start_time_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_time"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/meeting_date_key"
+        app:layout_constraintTop_toBottomOf="@id/meeting_date_key"/>
+
+    <TextView
+        android:id="@+id/start_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start time value"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/start_time_key"
+        app:layout_constraintStart_toStartOf="@id/meeting_date_value"/>
+
+    <TextView
+        android:id="@+id/end_time_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_time"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/meeting_date_key"
+        app:layout_constraintTop_toBottomOf="@id/start_time_key"/>
+
+    <TextView
+        android:id="@+id/end_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="end time value"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/end_time_key"
+        app:layout_constraintStart_toStartOf="@id/meeting_date_value"/>
+
+    <EditText
+        android:id="@+id/description_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="28dp"
+        android:singleLine="false"
+        app:layout_constraintTop_toBottomOf="@id/end_time_key"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:text="@string/submit"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
